@@ -39,17 +39,24 @@ embeddings = resnet(aligned).detach().cpu()
 dists = [[(e1 - e2).norm().item() for e2 in embeddings] for e1 in embeddings]
 print(pd.DataFrame(dists, columns=names, index=names))
 
+# This will return video from the first webcam on the computer.
 cap = cv2.VideoCapture(0)
 
-
-
-## Make use of the below part to make the app.
+# The following makes the app.
 while True:
-    _, frame = cap.read()
 
+  # ret is a boolean regarding whether or not there was a return at all,
+  # at the frame is each frame that is returned. If there is no frame, cap.read()
+  # return None
+  ret, frame = cap.read()
 
-    cv2.imshow("Frame", frame)
+  # Syntax: cv2.imshow(window_name, image)
+  cv2.imshow("frame", frame)
 
-    key = cv2.waitKey(1)
-    if key == 27:
+  # Runs once per frame and if we get a key, and that key is a q,
+  # it will exit the while loop
+  if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
+cap.release()
+cv2.destroyAllWindows()
