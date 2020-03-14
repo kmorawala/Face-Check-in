@@ -39,24 +39,37 @@ embeddings = resnet(aligned).detach().cpu()
 dists = [[(e1 - e2).norm().item() for e2 in embeddings] for e1 in embeddings]
 print(pd.DataFrame(dists, columns=names, index=names))
 
-# This will return video from the first webcam on the computer.
-cap = cv2.VideoCapture(0)
-
 # The following makes the app.
-while True:
+#importing open cv library for image/video processing
+import cv2
 
-  # ret is a boolean regarding whether or not there was a return at all,
-  # at the frame is each frame that is returned. If there is no frame, cap.read()
-  # return None
-  ret, frame = cap.read()
+# This will return video from the first webcam on the computer.
+vidcap = cv2.VideoCapture(0)
 
-  # Syntax: cv2.imshow(window_name, image)
-  cv2.imshow("frame", frame)
+#initializing variables
+result, image = vidcap.read()
+count = 0
 
-  # Runs once per frame and if we get a key, and that key is a q,
-  # it will exit the while loop
-  if cv2.waitKey(1) & 0xFF == ord('q'):
+#while there is a video result
+while result is True:
+
+    #create a jpg image with count number as the file name
+    cv2.imwrite("frame%d.jpg" % count, image)
+    # ret is a boolean regarding whether or not there was a return at all,
+    # at the frame is each frame that is returned. If there is no frame, cap.read()
+    # return None
+
+    #update both variables
+    result,image = vidcap.read()
+
+    #Results printed and count updated, and the image is shown
+    print('Read a new frame: ', result)
+    count += 1
+    cv2.imshow('image', image)
+
+    # Runs once per frame and if the user presses key q, break the loop
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-cap.release()
+vidcap.release()
 cv2.destroyAllWindows()
