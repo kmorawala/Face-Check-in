@@ -12,6 +12,9 @@ The underlying machine learning model analyzes the picture taken by the user at 
 
 ## How to use it:
 
+clone this repo, removing the '-' to allow python imports:
+```bash git clone https://github.com/kmorawala/Face-Check-in.git facenet_pytorch```
+
 Please be sure to import all of the following items in Python:
 * cv2 (it's best to download it through conda installation: conda install -c menpo opencv)
 * tkinter (Run "pip install tkinter" in command line)
@@ -24,6 +27,8 @@ Please be sure to import all of the following items in Python:
 Once installed, run the capture_image.py program to capture any images using your laptop camera. If you already have several images that can be used to used to create several classes and have images to evaluate, feel free to skip this step. 
 
 The classes can be defined by creating a folder in the "Classes" folder and placing an image of an individual in the appropriate class. For example, "Person01" should be the name of the person and the subfolder name whose image is being stored. Similarly, the images to classify should be placed in the "Test Faces" folder under "Test" folder. The folder names can be changed or existing folders can be utilized since the program will prompt the users to select a folder each time a folder path is required. Feel free to delete unused folders and/or images when you begin your own! 
+
+At this point, be sure to remove any files other than image files must be removed from above mentioned folders. .DS_Store file is known to download from github.
 
 Now, you may run the app.py program in Python and select the necessary folders as requested:
  * First, you will be prompted to select the folder which has classes of images. In the example, it would be the "Classes" folder.
