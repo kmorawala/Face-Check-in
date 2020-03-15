@@ -1,4 +1,5 @@
-# Face Check-in, An Automated Face Check-in Process using Face Recognition ML
+# Face Check-in 
+An Automated Face Check-in Process using Face Recognition ML
 
 ## About this project
 This project is a part of Facebook Machine Learning hackathon. We will process the images of various individuals and classify their image using a pre-trained machine learning model.
