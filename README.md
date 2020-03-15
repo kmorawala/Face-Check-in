@@ -56,6 +56,18 @@ We used the following technologies:
 * Google Collaboratory
 * Github
 
+## Pretrained models
+
+See: [models/inception_resnet_v1.py](models/inception_resnet_v1.py)
+
+The following model has been ported from facenet-pytorch (with links to download pytorch state_dict's):
+
+|Model name|LFW accuracy (as listed [here](https://github.com/timesler/facenet-pytorch))|Training dataset|
+| :- | :-: | -: |
+|[20180402-114759](https://drive.google.com/uc?export=download&id=1TDZVEBudGaEd5POR5X4ZsMvdsh1h68T1) (107MB)|0.9965|VGGFace2|
+
+Both pretrained models were trained on 160x160 px images, so will perform best if applied to images resized to this shape, which is done in the data loading portion of our program.
+
 ## Challenges we ran into
 All of our team members do not have extensive experience in this area, and some of us are completely new to machine learning. The challenge was to familiarize ourselves quickly with machine learning concepts, PyTorch, image processing, deep learning, etc. Second, finding an appropriate dataset to test was difficult since we needed to account for items such as different face angles, train data balancing in terms of gender, lighting, orientation, etc. and finding high-quality images or database was quite difficult to test the model. Third, picking an appropriate model was also quite a challenge and required us to do a lot of research.
 
@@ -77,3 +89,7 @@ Testing an existing model,
 We would like to build a better front-end for this project, allowing easier access for others to utilize it. Further, we see that the algorithm can be optimized for training and find a way to only periodically re-train the model using the newly added user class to save memory and computational power. Further, instead of storing each individual’s image, some other form of labels should be stored in a light-weight text file to enable quick processing and less memory usage.
 
 We would love to see this technology being implemented in the Indian railway as well as bus systems and people reaping benefits in terms of speed and efficiency.
+
+## References
+
+1. Tim Esler's facenet-pytorch repo: [https://github.com/timesler/facenet-pytorch](https://github.com/timesler/facenet-pytorch)
