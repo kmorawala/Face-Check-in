@@ -2,7 +2,7 @@
 An Automated Face Check-in Process using Face Recognition ML
 
 ## About this project
-This project is a part of Facebook Machine Learning hackathon. We will process the images of various individuals and classify their image using a pre-trained machine learning model.
+This project is a part of Facebook Machine Learning hackathon. The program processes the images of various individuals' faces, recognizes the face, classify the images using a pre-trained machine learning model, and provides the matching class result.
 
 ## Inspiration
 Our project’s inspiration came from a common issue that we noticed in the ticketing system, specifically the ticket checking process, in Indian railway and bus systems. Currently, the process of checking tickets is being done manually by a person, leading to more wait time for the passengers and requiring a person to be employed full-time just to check tickets one-by-one. We wanted to find a way to automate the ticket checking process, by simply having a user check-in at a metro/bus by having his/her picture taken, making the process quick and efficient. 
