@@ -37,7 +37,7 @@ We are using a pre-trained Inception Resnet (V1) models in PyTorch, pre-trained 
 
 A second Python program to capture user image is also included, so the user can easily have their images taken and stored at the folder of the user's choice. 
 
-Further, we used the following Head Pose Image Database to test our model for various face angles:
+Further, we used the following Head Pose Image Database (at http://www-prima.inrialpes.fr/perso/Gourier/Faces/HPDatabase.html) to test our model for various face angles:
 
 N. Gourier, D. Hall, J. L. Crowley
 Estimating Face Orientation from Robust Detection of Salient Facial Features
