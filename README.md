@@ -43,6 +43,18 @@ N. Gourier, D. Hall, J. L. Crowley
 Estimating Face Orientation from Robust Detection of Salient Facial Features
 Proceedings of Pointing 2004, ICPR, International Workshop on Visual Observation of Deictic Gestures, Cambridge, UK
 
+We used the following technologies:
+* Python
+* PyTorch
+* TorchVision
+* facenet_pytorch
+* numpy
+* pandas
+* tkinter
+* cv2 (OpenCV)
+* Google Collaboratory
+* Github
+
 ## Challenges we ran into
 All of our team members do not have extensive experience in this area, and some of us are completely new to machine learning. The challenge was to familiarize ourselves quickly with machine learning concepts, PyTorch, image processing, deep learning, etc. Second, finding an appropriate dataset to test was difficult since we needed to account for items such as different face angles, train data balancing in terms of gender, lighting, orientation, etc. and finding high-quality images or database was quite difficult to test the model. Third, picking an appropriate model was also quite a challenge and required us to do a lot of research.
 
